@@ -45,14 +45,17 @@ Skel for BLINUX
 
 %install
 rm -fr %{buildroot}
-mkdir -p %{buildroot}%{_sysconfdir}
-cp .Xdefaults %{buildroot}%{_sysconfdir}
-cp .bashrc %{buildroot}%{_sysconfdir}
-cp .emacs %{buildroot}%{_sysconfdir}
-cp .xsession %{buildroot}%{_sysconfdir}
+mkdir -p %{buildroot}%{_sysconfdir}/skel-BLINUX/
+cp .Xdefaults %{buildroot}%{_sysconfdir}/skel-BLINUX/
+cp .bashrc %{buildroot}%{_sysconfdir}/skel-BLINUX/
+cp .emacs %{buildroot}%{_sysconfdir}/skel-BLINUX/
+cp .xsession %{buildroot}%{_sysconfdir}/skel-BLINUX/
 
 %files
-%attr(755,root,root) %{_sysconfdir}/
+%attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.Xdefaults
+%attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.bashrc
+%attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.emacs
+%attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.xsession
 
 %changelog
 * Sat Mar 01 2014 Emmanuel Vadot <elbarto@bocal.org> - 1.0-0
