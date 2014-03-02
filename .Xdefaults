@@ -1,0 +1,55 @@
+/* xconsole  */
+xconsole*font:                  7x13bold
+xconsole*background:            black
+xconsole*foreground:            white
+xconsole*geometry:              +0-0
+
+/* ns_xm */
+Xm*font:			7x13bold
+Xm*foreground:                  white
+Xm*background:                  black
+Xm*geometry:                    400x200+0-0
+
+/* xterm */
+xterm*font:                     9x15bold
+xterm*background:               black
+xterm*foreground:               white
+xterm*saveLines:                1000
+xterm*scrollBar:                false
+
+/* rxvt*/
+rxvt*font:			9x15bold
+rxvt*background:		black
+rxvt*foreground:		white
+rxvt*visualBell:		true
+rxvt*scrollBar:			false
+rxvt*saveLines:			2000
+rxvt*scrollTtyOutput:		false
+rxvt*scrollTtyKeypress:		true
+rxvt*scrollWithBuffer:		true
+rxvt*color0:			#000000
+rxvt*color1:			#9e1828
+rxvt*color2:			#aece92
+rxvt*color3:			#968a38
+rxvt*color4:			#414171
+rxvt*color5:			#963c59
+rxvt*color6:			#418179
+rxvt*color7:			#bebebe
+rxvt*color8:			#666666
+rxvt*color9:			#cf6171
+rxvt*color10:			#c5f779
+rxvt*color11:			#fff796
+rxvt*color12:			#4186be
+rxvt*color13:			#cf9ebe
+rxvt*color14:			#71bebe
+rxvt*color15:			#ffffff
+
+/* dclock */
+dclock*background:		black
+dclock*foreground:		white
+dclock*led_off:			black
+dclock*geometry:		185x50-0+0
+
+/* emacs */
+emacs*font:			7x13bold
+emacs*ReverseVideo:		on
