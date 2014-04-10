@@ -24,7 +24,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 Name:		skel-BLINUX
-Version:        1.0
+Version:        1.0.1
 Release:        0
 License:        BSD-2-Clause
 Summary:	Skel BLINUX
@@ -58,5 +58,8 @@ cp .xsession %{buildroot}%{_sysconfdir}/skel-BLINUX/
 %attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.xsession
 
 %changelog
+* Thu Apr 10 2014 Emmanuel Vadot <elbarto@bocal.org> - 1.0.1-0
+- Package creation
+
 * Sat Mar 01 2014 Emmanuel Vadot <elbarto@bocal.org> - 1.0-0
 - Package creation
