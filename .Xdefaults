@@ -4,12 +4,6 @@ xconsole*background:            black
 xconsole*foreground:            white
 xconsole*geometry:              +0-0
 
-/* ns_xm */
-Xm*font:			7x13bold
-Xm*foreground:                  white
-Xm*background:                  black
-Xm*geometry:                    400x200+0-0
-
 /* xterm */
 xterm*font:                     9x15bold
 xterm*background:               black
@@ -43,12 +37,6 @@ rxvt*color12:			#4186be
 rxvt*color13:			#cf9ebe
 rxvt*color14:			#71bebe
 rxvt*color15:			#ffffff
-
-/* dclock */
-dclock*background:		black
-dclock*foreground:		white
-dclock*led_off:			black
-dclock*geometry:		185x50-0+0
 
 /* emacs */
 emacs*font:			7x13bold

@@ -34,6 +34,7 @@ Vendor:		Bocal
 Url:            http://www.bocal.org
 Group:          System Environment/Base
 Packager:       Emmanuel Vadot <elbarto@bocal.org>
+Requires:	std-el
 
 %description
 Skel for BLINUX users
@@ -49,16 +50,15 @@ mkdir -p %{buildroot}%{_sysconfdir}/skel-BLINUX/
 cp .Xdefaults %{buildroot}%{_sysconfdir}/skel-BLINUX/
 cp .bashrc %{buildroot}%{_sysconfdir}/skel-BLINUX/
 cp .emacs %{buildroot}%{_sysconfdir}/skel-BLINUX/
-cp .xsession %{buildroot}%{_sysconfdir}/skel-BLINUX/
 
 %files
 %attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.Xdefaults
 %attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.bashrc
 %attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.emacs
-%attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.xsession
 
 %changelog
-* Sun May 04 2014 Emmanuel Vadot <elbarto@bocal.org> - 2.0-0
+* Mon Aug 04 2014 Emmanuel Vadot <elbarto@bocal.org> - 2.0-0
+- Remove .xsession
 - Bump to 2.0
 
 * Thu Apr 10 2014 Emmanuel Vadot <elbarto@bocal.org> - 1.0.1-0
