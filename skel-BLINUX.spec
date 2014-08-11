@@ -28,28 +28,31 @@ Version:        2.0
 Release:        0
 License:        BSD-2-Clause
 Summary:	Skel BLINUX
-BuildArch:      noarch
-Source0:        %{name}-%{version}.tgz
-Vendor:		Bocal
-Url:            http://www.bocal.org
 Group:          System Environment/Base
-Packager:       Emmanuel Vadot <elbarto@bocal.org>
+
+BuildArch:      noarch
+Source0:	Xdefaults
+Source1:	bashrc
+Source2:	emacs
 Requires:	std-el
+
+Packager:       Emmanuel Vadot <elbarto@bocal.org>
+Url:            http://www.blinux.fr
+Vendor:		Blinux
 
 %description
 Skel for BLINUX users
 
 %prep
-%setup
 
 %build
 
 %install
 rm -fr %{buildroot}
 mkdir -p %{buildroot}%{_sysconfdir}/skel-BLINUX/
-cp .Xdefaults %{buildroot}%{_sysconfdir}/skel-BLINUX/
-cp .bashrc %{buildroot}%{_sysconfdir}/skel-BLINUX/
-cp .emacs %{buildroot}%{_sysconfdir}/skel-BLINUX/
+install -D -m 644 Xdefaults %{buildroot}%{_sysconfdir}/skel-BLINUX/
+install -D -m 644 bashrc %{buildroot}%{_sysconfdir}/skel-BLINUX/
+install -D -m 644 emacs %{buildroot}%{_sysconfdir}/skel-BLINUX/
 
 %files
 %attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.Xdefaults
