@@ -50,9 +50,9 @@ Skel for BLINUX users
 %install
 rm -fr %{buildroot}
 mkdir -p %{buildroot}%{_sysconfdir}/skel-BLINUX/
-install -D -m 644 Xdefaults %{buildroot}%{_sysconfdir}/skel-BLINUX/
-install -D -m 644 bashrc %{buildroot}%{_sysconfdir}/skel-BLINUX/
-install -D -m 644 emacs %{buildroot}%{_sysconfdir}/skel-BLINUX/
+install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/skel-BLINUX/
+install -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/skel-BLINUX/
+install -D -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/skel-BLINUX/
 
 %files
 %attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.Xdefaults
