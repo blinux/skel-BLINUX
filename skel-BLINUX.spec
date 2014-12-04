@@ -25,7 +25,7 @@
 
 Name:		skel-BLINUX
 Version:        2.0
-Release:        0
+Release:        1
 License:        BSD-2-Clause
 Summary:	Skel BLINUX
 Group:          System Environment/Base
@@ -34,6 +34,7 @@ BuildArch:      noarch
 Source0:	Xdefaults
 Source1:	bashrc
 Source2:	emacs
+Source3:	icewm_startup
 Requires:	std-el
 
 Packager:       Emmanuel Vadot <elbarto@bocal.org>
@@ -50,14 +51,20 @@ Skel for BLINUX users
 %install
 rm -fr %{buildroot}
 mkdir -p %{buildroot}%{_sysconfdir}/skel-BLINUX/
-install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/skel-BLINUX/
-install -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/skel-BLINUX/
-install -D -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/skel-BLINUX/
+mkdir -p %{buildroot}%{_sysconfdir}/skel-BLINUX/.icewm
+install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/skel-BLINUX/.Xdefaults
+install -D -m 755 %{SOURCE1} %{buildroot}%{_sysconfdir}/skel-BLINUX/.bashrc
+install -D -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/skel-BLINUX/.emacs
+install -D -m 755 %{SOURCE3} %{buildroot}%{_sysconfdir}/skel-BLINUX/.icewm/startup
 
 %files
-%attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.Xdefaults
-%attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.bashrc
-%attr(644,root,root) %{_sysconfdir}/skel-BLINUX/.emacs
+%defattr(-,root,root)
+%{_sysconfdir}/skel-BLINUX/
+%{_sysconfdir}/skel-BLINUX/.icewm
+%{_sysconfdir}/skel-BLINUX/.Xdefaults
+%{_sysconfdir}/skel-BLINUX/.bashrc
+%{_sysconfdir}/skel-BLINUX/.emacs
+%{_sysconfdir}/skel-BLINUX/.icewm/startup
 
 %changelog
 * Mon Aug 04 2014 Emmanuel Vadot <elbarto@bocal.org> - 2.0-0
